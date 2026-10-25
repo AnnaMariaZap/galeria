@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Galeria</title>
+  <link rel="stylesheet" href="galeryja.css">
+</head>
+<body id="top">
+
+  <header>
+    <h1>ORCIA or BUBA</h1>
+    <p>WICH ONE ARE YOU TODAY?</p>
+  </header>
+
+  <main class="gallery">
+    <div class="gallery-item">
+<img src="czeczunia.jpg" alt="Photo 1">
+ <div class="caption">chillout Orcia</div>
+    </div>
+    <div class="gallery-item">
+ <img src="buba.jpeg" alt="Photo 2">
+ <div class="caption">innocent Buba</div>
+    </div>
+    <div class="gallery-item">
+ <img src="bijasie.jpeg" alt="Photo 3">
+ <div class="caption">sisterhood Buba and Orcia</div>
+    </div>
+    <div class="gallery-item">
+ <img src="jenzorbuba.jpeg" alt="Photo 4">
+<div class="caption">squished Buba</div>
+    </div>
+    <div class="gallery-item">
+ <img src="spiacaorka!.jpeg" alt="Photo 5">
+ <div class="caption">sleepy Orcia</div>
+    </div>
+    <div class="gallery-item">
+ <img src="bubainna.jpeg" alt="Photo 6">
+ <div class="caption">innocent Buba</div>
+    </div>
+    <div class="gallery-item">
+ <img src="niewinnaorka.jpeg" alt="Photo 7">
+<div class="caption">big eye Orcia</div>
+    </div>
+    <div class="gallery-item">
+ <img src="dziwnab.jpeg" alt="Photo 8">
+ <div class="caption">woke up like this Buba</div>
+    </div>
+    <div class="gallery-item">
+ <img src="lisek.jpg  " alt="Photo 9">
+ <div class="caption">foxey Orcia</div>
+    </div>
+    <div class="gallery-item">
+ <img src="drzema.jpeg" alt="Photo 10">
+ <div class="caption">Little nap Buba</div>
+    </div>
+    <div class="gallery-item">
+    <img src="swieta.jpeg" alt="Photo 11">
+ <div class="caption">christams edition Orcia</div>
+    </div>
+    <div class="gallery-item">
+<img src="ziew.jpeg" alt="Photo 12">
+ <div class="caption">big yaaawn Buba</div>
+    </div>
+  </main>
+
+  <footer>
+    <a href="#top" class="back-to-top">Go back to the top</a>
+  </footer>
+
+ 
+  <div id="lightbox" class="lightbox hidden">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightbox-img');
+
+   
+    document.querySelectorAll('.gallery-item img').forEach(function (img) {
+      img.addEventListener('click', function () {
+        lightbox.classList.remove('hidden');
+        lightboxImg.src = img.src;
+      });
+    });
+
+   
+    document.querySelector('.close').addEventListener('click', function () {
+      lightbox.classList.add('hidden');
+    });
+
+    lightbox.addEventListener('click', function (event) {
+      if (event.target === lightbox) {
+        lightbox.classList.add('hidden');
+      }
+    });
+  </script>
+
+</body>
+</html>
